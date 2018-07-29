@@ -5,6 +5,7 @@ import { Item } from '../../models/item';
 import { Items } from '../../providers';
 import { AlertController } from 'ionic-angular';
 import { LoadingController } from 'ionic-angular';
+import { HttpClient } from '@angular/common/http';
 
 @IonicPage()
 @Component({
@@ -14,7 +15,13 @@ import { LoadingController } from 'ionic-angular';
 export class ListMasterPage {
   currentItems: Item[];
 
-  constructor(public navCtrl: NavController, public items: Items, public modalCtrl: ModalController, public alertCtrl: AlertController, public loadingCtrl: LoadingController) {
+  constructor(
+    public navCtrl: NavController,
+    public items: Items,
+    public modalCtrl: ModalController,
+    public alertCtrl: AlertController,
+    public loadingCtrl: LoadingController,
+    public http: HttpClient) {
     this.currentItems = this.items.query();
   }
 
@@ -43,6 +50,9 @@ export class ListMasterPage {
   counter: any;
   counter2: any;
 
+  urlGet = 'https://lastick-develop.vapor.cloud/events'
+  listEvents: Array<any> = [{ "id": 1, "remainingSeats": 32, "discountedPrice": 7, "title": "Mission: Impossible Fallout", "remainingTime": 342, "originalPrice": 15, "address": "Shopping Metro Tatuape" }, { "id": 2, "remainingSeats": 32, "discountedPrice": 7, "title": "Mission: Impossible Fallout", "remainingTime": 342, "originalPrice": 15, "address": "Shopping Metro Tatuape" }, { "id": 3, "remainingSeats": 32, "discountedPrice": 7, "title": "Mission: Impossible Fallout", "remainingTime": 342, "originalPrice": 15, "address": "Shopping Metro Tatuape" }]
+
   /**
    * The view loaded, let's query our items for the list
    */
@@ -50,6 +60,17 @@ export class ListMasterPage {
 
     this.startCounter()
     this.startCounter2()
+
+    this.http.get(this.urlGet).subscribe(data => {
+      console.log(data);
+    }, err => {
+      console.log(err);
+    });
+
+    // console.log(this.listEvents)
+    // console.log(typeof this.listEvents)
+
+
   }
 
   startCounter() {
