@@ -1,13 +1,9 @@
 <ion-header>
 
   <ion-navbar>
-    <ion-title>{{ 'LIST_MASTER_TITLE' | translate }}</ion-title>
-
-    <ion-buttons end>
-      <button ion-button icon-only (click)="addItem()">
-        <ion-icon name="add"></ion-icon>
-      </button>
-    </ion-buttons>
+    <ion-title>
+      <img style="height: 36px;	width: 139px; margin-left: 100px;" src="https://github.com/lastick-pwa/lastick-pwa/raw/master/art/header-logo.png">
+    </ion-title>
   </ion-navbar>
 
 </ion-header>
@@ -15,34 +11,31 @@
 <ion-content class="card-background-page">
 
   <ion-card>
-    <h2>Show Foo Figthers in São Paulo</h2>
+    <ion-card-title>
+      <span style="text-align: center">
+        Foo Fighters Live in São Paulo
+      </span>
+    </ion-card-title>
     <img src="https://ionicframework.com/dist/preview-app/www/assets/img/nin-live.png" />
-    <span class="counter"> teste</span>
+    <div class="counter"> {{counter}}</div>
     <br/>
     <span class="older-price"> R$500,00</span>
     <span class="actual-price">R$150,00</span>
-    <button class="buy" ion-button>Button</button>
+    <button class="buy" ion-button>Comprar</button>
   </ion-card>
 
   <ion-card>
-    <img src="https://ionicframework.com/dist/preview-app/www/assets/img/badu-live.png" />
-    <div class="card-title">Amsterdam</div>
-    <div class="card-subtitle">64 Listings</div>
-    <button ion-button>Button</button>
-  </ion-card>
-
-  <ion-card>
+    <ion-card-title>
+      <span style="text-align: center">
+        Queen Live in NY
+      </span>
+    </ion-card-title>
     <img src="https://ionicframework.com/dist/preview-app/www/assets/img/queen-live.png" />
-    <div class="card-title">San Francisco</div>
-    <div class="card-subtitle">72 Listings</div>
-    <button ion-button>Button</button>
-  </ion-card>
-
-  <ion-card>
-    <img src="https://ionicframework.com/dist/preview-app/www/assets/img/rundmc-live.png" />
-    <div class="card-title">Madison</div>
-    <div class="card-subtitle">28 Listings</div>
-    <button ion-button>Button</button>
+    <div class="counter"> {{counter}}</div>
+    <br/>
+    <span class="older-price"> R$730,00</span>
+    <span class="actual-price">R$320,00</span>
+    <button class="buy-two" ion-button>Comprar</button>
   </ion-card>
 
 </ion-content>

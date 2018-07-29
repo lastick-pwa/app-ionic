@@ -5,7 +5,7 @@ page-list-master {
 .counter {	
     background-color: #FC3645;
     height: 20px;	
-    width: 127px;	
+    width: 100%;	
     color: #FFF;	
     font-family: "SF Pro Text";	
     font-size: 20px;	
@@ -21,6 +21,7 @@ page-list-master {
     font-size: 20px;	
     line-height: 24px;
     text-decoration:line-through;
+    margin-left: 20px;
 }
 .actual-price {
     height: 36px;	
@@ -30,10 +31,22 @@ page-list-master {
     font-size: 30px;	
     font-weight: 700;	
     line-height: 36px;
+    margin-left: 15px;
 }
 .buy {
     height: 30.77px;	
     width: 84.72px;	
     background-color: #0E3448;
-    margin-left: 50px;
+    margin-left: 25px;
+    position: absolute;
+    top: 320px;
 }
+.buy-two {
+    height: 30.77px;	
+    width: 84.72px;	
+    background-color: #0E3448;
+    margin-left: 25px;
+    position: absolute;
+    top: 682px;
+}
+
