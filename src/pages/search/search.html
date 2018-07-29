@@ -1,22 +1,45 @@
 <ion-header>
 
   <ion-navbar>
-    <ion-title>{{ 'SEARCH_TITLE' | translate }}</ion-title>
+    <ion-title>
+      <img style="height: 36px;	width: 139px; margin-left: 100px;" src="https://github.com/lastick-pwa/lastick-pwa/raw/master/art/header-logo.png">
+    </ion-title>
   </ion-navbar>
 
 </ion-header>
 
 
 <ion-content>
-  <ion-searchbar (ionInput)="getItems($event)" placeholder="{{ 'SEARCH_PLACEHOLDER' | translate }}"></ion-searchbar>
   <ion-list>
-    <button ion-item (click)="openItem(item)" *ngFor="let item of currentItems">
-      <ion-avatar item-start>
-        <img [src]="item.profilePic" />
-      </ion-avatar>
-      <h2>{{item.name}}</h2>
-      <p>{{item.about}}</p>
-      <ion-note item-end *ngIf="item.note">{{item.note}}</ion-note>
-    </button>
+    <ion-item>
+      <ion-thumbnail item-start>
+        <img style="width: 80px; height: 80px;" src="https://ionicframework.com/dist/preview-app/www/assets/img/nin-live.png">
+      </ion-thumbnail>
+      <h2>Foo Fighters Live in São Paulo</h2>
+      <p>31 de Julho de 2018 - 21hrs</p>
+      <button ion-button clear item-end>Detalhe</button>
+      <br />
+      <button ion-button clear item-end>Extorno</button>
+    </ion-item>
+    <ion-item>
+      <ion-thumbnail item-start>
+        <img src="https://ionicframework.com/dist/preview-app/www/assets/img/thumbnail-bttf.png">
+      </ion-thumbnail>
+      <h2>De volta para o Futuro Remake</h2>
+      <p>05 de Agosto de 2018 - 18hrs</p>
+      <button ion-button clear item-end>Detalhe</button>
+      <br />
+      <button ion-button clear item-end>Extorno</button>
+    </ion-item>
+    <ion-item>
+      <ion-thumbnail item-start>
+        <img src="https://ionicframework.com/dist/preview-app/www/assets/img/thumbnail-batman.png">
+      </ion-thumbnail>
+      <h2>Batman Remake</h2>
+      <p>31 de Julho de 2018 - 14hrs</p>
+      <button ion-button clear item-end>Detalhe</button>
+      <br>
+      <button ion-button clear item-end (click)="showAlert()">Extorno</button>
+    </ion-item>
   </ion-list>
 </ion-content>
