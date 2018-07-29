@@ -1,3 +1,4 @@
+import { SearchPage } from './../search/search';
 import { BuyTicketPage } from './../buy-ticket/buy-ticket';
 import { Component } from '@angular/core';
 import { IonicPage, ModalController, NavController } from 'ionic-angular';
@@ -23,9 +24,12 @@ export class ListMasterPage {
   presentLoading() {
     const loader = this.loadingCtrl.create({
       content: "Confirmando Pagamento...",
-      duration: 3000
+      duration: 4500
     });
     loader.present();
+    loader.dismiss().then(() => {
+      this.goToPage();
+    })
   }
 
 
@@ -149,6 +153,6 @@ export class ListMasterPage {
   }
 
   goToPage() {
-    this.navCtrl.push(BuyTicketPage);
+    this.navCtrl.push(SearchPage);
   }
 }

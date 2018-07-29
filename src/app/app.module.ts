@@ -1,3 +1,4 @@
+import { SearchPage } from './../pages/search/search';
 import { BuyTicketPage } from './../pages/buy-ticket/buy-ticket';
 import { HttpClient, HttpClientModule } from '@angular/common/http';
 import { ErrorHandler, NgModule } from '@angular/core';
@@ -38,7 +39,8 @@ export function provideSettings(storage: Storage) {
 @NgModule({
   declarations: [
     MyApp,
-    BuyTicketPage
+    BuyTicketPage,
+    SearchPage
   ],
   imports: [
     BrowserModule,
@@ -56,7 +58,8 @@ export function provideSettings(storage: Storage) {
   bootstrap: [IonicApp],
   entryComponents: [
     MyApp,
-    BuyTicketPage
+    BuyTicketPage,
+    SearchPage
   ],
   providers: [
     Api,
