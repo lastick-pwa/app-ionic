@@ -3,6 +3,8 @@ import { IonicPage, ModalController, NavController } from 'ionic-angular';
 
 import { Item } from '../../models/item';
 import { Items } from '../../providers';
+import { AlertController } from 'ionic-angular';
+import { LoadingController } from 'ionic-angular';
 
 @IonicPage()
 @Component({
@@ -12,9 +14,29 @@ import { Items } from '../../providers';
 export class ListMasterPage {
   currentItems: Item[];
 
-  constructor(public navCtrl: NavController, public items: Items, public modalCtrl: ModalController) {
+  constructor(public navCtrl: NavController, public items: Items, public modalCtrl: ModalController, public alertCtrl: AlertController, public loadingCtrl: LoadingController) {
     this.currentItems = this.items.query();
   }
+
+
+  presentLoading() {
+    const loader = this.loadingCtrl.create({
+      content: "Confirmando Pagamento...",
+      duration: 3000
+    });
+    loader.present();
+  }
+
+
+  showAlert() {
+    const alert = this.alertCtrl.create({
+      title: 'Pagamento Confirmado',
+      subTitle: 'Seu ingresso foi adicionado em Meus tickets',
+      buttons: ['OK']
+    });
+    alert.present();
+  }
+
 
   // Set the date we're counting down to
 
