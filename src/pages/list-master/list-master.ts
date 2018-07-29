@@ -1,3 +1,4 @@
+import { BuyTicketPage } from './../buy-ticket/buy-ticket';
 import { Component } from '@angular/core';
 import { IonicPage, ModalController, NavController } from 'ionic-angular';
 
@@ -123,5 +124,9 @@ export class ListMasterPage {
     this.navCtrl.push('ItemDetailPage', {
       item: item
     });
+  }
+
+  goToPage() {
+    this.navCtrl.push(BuyTicketPage);
   }
 }
