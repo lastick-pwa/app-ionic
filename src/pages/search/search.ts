@@ -1,3 +1,4 @@
+import { BuyTicketPage } from './../buy-ticket/buy-ticket';
 import { Component } from '@angular/core';
 import { IonicPage, NavController, NavParams } from 'ionic-angular';
 
@@ -46,6 +47,10 @@ export class SearchPage {
     this.navCtrl.push('ItemDetailPage', {
       item: item
     });
+  }
+
+  goToPage() {
+    this.navCtrl.push(BuyTicketPage);
   }
 
 }
