@@ -5,7 +5,7 @@
   "display": "standalone",
   "icons": [
     {
-      "src": "assets/imgs/logo.png",
+      "src": "https://github.com/lastick-pwa/lastick-pwa/blob/master/art/android-chrome-192x192.png?raw=true",
       "sizes": "512x512",
       "type": "image/png"
     }
