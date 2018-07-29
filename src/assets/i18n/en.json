@@ -7,7 +7,7 @@
   "LOGIN": "Entrar",
   "SIGNUP": "Criar",
   "TAB1_TITLE": "eventos",
-  "TAB2_TITLE": "Pesquisar",
+  "TAB2_TITLE": "Meus Tickets",
   "TAB3_TITLE": "Configurações",
   "MAP_TITLE": "Map",
   "TUTORIAL_SKIP_BUTTON": "Skip",
@@ -43,6 +43,6 @@
   "CANCEL_BUTTON": "Cancelar",
   "DELETE_BUTTON": "Deletar",
   "CARDS_TITLE": "Social",
-  "SEARCH_TITLE": "Pesquisar",
+  "SEARCH_TITLE": "Meus Tickets",
   "SEARCH_PLACEHOLDER": "Pesquisar Eventos"
 }

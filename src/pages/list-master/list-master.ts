@@ -38,7 +38,7 @@ export class ListMasterPage {
       // Get todays date and time
       var now = new Date().getTime();
 
-      var countDownDate = new Date("Sep 5, 2018 15:37:25").getTime();
+      var countDownDate = new Date("Jul 31, 2018 15:37:25").getTime();
 
       // Find the distance between now an the count down date
       var distance = countDownDate - now;
