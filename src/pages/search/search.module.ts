@@ -11,9 +11,6 @@ import { SearchPage } from './search';
   imports: [
     IonicPageModule.forChild(SearchPage),
     TranslateModule.forChild()
-  ],
-  exports: [
-    SearchPage
   ]
 })
 export class SearchPageModule { }

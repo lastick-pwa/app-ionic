@@ -39,7 +39,8 @@ export function provideSettings(storage: Storage) {
 @NgModule({
   declarations: [
     MyApp,
-    BuyTicketPage
+    BuyTicketPage,
+    SearchPage
   ],
   imports: [
     BrowserModule,
