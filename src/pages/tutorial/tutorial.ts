@@ -23,8 +23,6 @@ export class TutorialPage {
     this.dir = platform.dir();
     translate.get(["TUTORIAL_SLIDE1_TITLE",
       "TUTORIAL_SLIDE1_DESCRIPTION",
-      "TUTORIAL_SLIDE2_TITLE",
-      "TUTORIAL_SLIDE2_DESCRIPTION",
       "TUTORIAL_SLIDE3_TITLE",
       "TUTORIAL_SLIDE3_DESCRIPTION",
     ]).subscribe(
@@ -34,12 +32,7 @@ export class TutorialPage {
           {
             title: values.TUTORIAL_SLIDE1_TITLE,
             description: values.TUTORIAL_SLIDE1_DESCRIPTION,
-            image: 'assets/img/ica-slidebox-img-1.png',
-          },
-          {
-            title: values.TUTORIAL_SLIDE2_TITLE,
-            description: values.TUTORIAL_SLIDE2_DESCRIPTION,
-            image: 'assets/img/ica-slidebox-img-2.png',
+            image: 'https://github.com/lastick-pwa/lastick-pwa/raw/master/art/header-logo.png',
           },
           {
             title: values.TUTORIAL_SLIDE3_TITLE,
