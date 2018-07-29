@@ -17,8 +17,9 @@ export class ListMasterPage {
   }
 
   // Set the date we're counting down to
-  countDownDate = new Date("Sep 5, 2018 15:37:25").getTime();
+
   counter: any;
+  counter2: any;
 
   /**
    * The view loaded, let's query our items for the list
@@ -26,6 +27,7 @@ export class ListMasterPage {
   ionViewDidLoad() {
 
     this.startCounter()
+    this.startCounter2()
   }
 
   startCounter() {
@@ -36,8 +38,10 @@ export class ListMasterPage {
       // Get todays date and time
       var now = new Date().getTime();
 
+      var countDownDate = new Date("Sep 5, 2018 15:37:25").getTime();
+
       // Find the distance between now an the count down date
-      var distance = this.countDownDate - now;
+      var distance = countDownDate - now;
 
       // Time calculations for days, hours, minutes and seconds
       var days = Math.floor(distance / (1000 * 60 * 60 * 24));
@@ -56,6 +60,39 @@ export class ListMasterPage {
       // }
     }, 1000);
   }
+
+  startCounter2() {
+
+    // Update the count down every 1 second
+    var x = setInterval(() => {
+
+      // Get todays date and time
+      var now = new Date().getTime();
+
+
+      var countDownDate = new Date("Jul 30, 2018 13:24:25").getTime();
+
+      // Find the distance between now an the count down date
+      var distance = countDownDate - now;
+
+      // Time calculations for days, hours, minutes and seconds
+      var days = Math.floor(distance / (1000 * 60 * 60 * 24));
+      var hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+      var minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
+      var seconds = Math.floor((distance % (1000 * 60)) / 1000);
+
+      // Output the result in an element with id="demo"
+      this.counter2 = days + "d " + hours + "h "
+        + minutes + "m " + seconds + "s ";
+
+      // If the count down is over, write some text 
+      // if (distance < 0) {
+      //   clearInterval(x);
+      //   document.getElementById("demo").innerHTML = "EXPIRED";
+      // }
+    }, 1000);
+  }
+
 
 
   /**
