@@ -66,11 +66,11 @@ export class ListMasterPage {
     this.startCounter()
     this.startCounter2()
 
-    this.http.get(this.urlGet).subscribe(data => {
-      console.log(data);
-    }, err => {
-      console.log(err);
-    });
+    // this.http.get(this.urlGet).subscribe(data => {
+    //   console.log(data);
+    // }, err => {
+    //   console.log(err);
+    // });
 
     // console.log(this.listEvents)
     // console.log(typeof this.listEvents)

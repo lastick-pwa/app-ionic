@@ -39,8 +39,7 @@ export function provideSettings(storage: Storage) {
 @NgModule({
   declarations: [
     MyApp,
-    BuyTicketPage,
-    SearchPage
+    BuyTicketPage
   ],
   imports: [
     BrowserModule,
@@ -58,8 +57,7 @@ export function provideSettings(storage: Storage) {
   bootstrap: [IonicApp],
   entryComponents: [
     MyApp,
-    BuyTicketPage,
-    SearchPage
+    BuyTicketPage
   ],
   providers: [
     Api,
